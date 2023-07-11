@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49278979a4746f41b6d8e56f2008eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileOffsetMultiplier: 1
+  projectileOffsetMultiplier: 1.5
 --- !u!70 &7923216653828484985
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
