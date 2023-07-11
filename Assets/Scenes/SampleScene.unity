@@ -784,7 +784,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!19719996 &414170416
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -4998,7 +4998,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -5149,7 +5149,7 @@ GameObject:
   - component: {fileID: 571152267}
   - component: {fileID: 571152268}
   - component: {fileID: 571152269}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: VirtualCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15090,6 +15090,7 @@ GameObject:
   - component: {fileID: 1341909814}
   - component: {fileID: 1341909815}
   - component: {fileID: 1341909816}
+  - component: {fileID: 1341909817}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -15241,6 +15242,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0017616749, y: -0.14129725}
   m_Size: {x: 0.42397094, y: 0.7072118}
   m_Direction: 0
+--- !u!50 &1341909817
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341909809}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1401567514
 GameObject:
   m_ObjectHideFlags: 0
@@ -15594,7 +15616,7 @@ GameObject:
   - component: {fileID: 1835775430}
   - component: {fileID: 1835775432}
   - component: {fileID: 1835775433}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

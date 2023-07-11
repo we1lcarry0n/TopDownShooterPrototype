@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     private Controls controls;
+    private Rigidbody2D rb2d;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Shooter shooter;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         controls = new Controls();
+        rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         shooter = GetComponent<Shooter>();
@@ -42,14 +44,14 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         movementVector = CalculateMovementVector();
-        transform.position += ConvertToVector3(movementVector);
+        rb2d.velocity = ConvertToVector3(movementVector);
         AdjustAnimation(movementVector);
         AdjustFlipping();
     }
 
     private Vector2 CalculateMovementVector()
     {
-        return controls.Player.Movement.ReadValue<Vector2>().normalized * (speed * Time.deltaTime);
+        return controls.Player.Movement.ReadValue<Vector2>().normalized * (speed);
     }
 
     private Vector3 ConvertToVector3(Vector2 input)
